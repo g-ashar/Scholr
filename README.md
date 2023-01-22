@@ -85,6 +85,8 @@ verification purposes!
 
 ***
 
+## How to run Scholr
+
 ## Version History
 
 > Version 1.0
