@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@GeneralSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gashar.fxml.SimpleCreateController">
+    <children>
+        <AnchorPane layoutX="73.0" layoutY="-25.0" prefHeight="200.0" prefWidth="200.0" styleClass="generalBackgroundPane" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TextField fx:id="courseNameField" layoutX="83.0" layoutY="13.0" prefHeight="28.0" prefWidth="447.0" promptText="Course Name Here" styleClass="generalField" />
+            <Button fx:id="backButton" layoutX="545.0" layoutY="14.0" mnemonicParsing="false" onAction="#backAction" styleClass="generalButton" text="Back" AnchorPane.topAnchor="14.0" />
+            </children>
+        </AnchorPane>
+        <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="34.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-15.0">
+            <image>
+                <Image url="@images/scholrlogo.png" />
+            </image>
+        </ImageView>
+      <ScrollPane hbarPolicy="NEVER" hmax="0.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <content>
+          <AnchorPane fx:id="contentPane" minHeight="350.0" minWidth="585.0" prefHeight="450.0" prefWidth="585.0">
+               <children>
+                  <ComboBox fx:id="comp1Box" layoutX="421.0" layoutY="14.0" onAction="#comp1Change" prefWidth="150.0" promptText="Component 1" styleClass="generalButton" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="25.0" />
+                  <ComboBox fx:id="comp2Box" layoutX="421.0" layoutY="89.0" onAction="#comp2Change" prefWidth="150.0" promptText="Component 2" styleClass="generalButton" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="100.0" />
+                  <ComboBox fx:id="comp3Box" layoutX="421.0" layoutY="164.0" onAction="#comp3Change" prefWidth="150.0" promptText="Component 3" styleClass="generalButton" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="175.0" />
+                  <ComboBox fx:id="comp4Box" layoutX="421.0" layoutY="217.0" onAction="#comp4Change" prefWidth="150.0" promptText="Component 4" styleClass="generalButton" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="250.0" />
+                  <ComboBox fx:id="comp5Box" layoutX="420.0" layoutY="296.0" onAction="#comp5Change" prefWidth="150.0" promptText="Component 5" styleClass="generalButton" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="325.0" />
+                  <Button fx:id="nextPageButton" layoutX="460.0" layoutY="286.0" mnemonicParsing="false" styleClass="generalButton" text="Next Page" AnchorPane.topAnchor="400.0" />
+                  <Button fx:id="finishButton" layoutX="397.0" layoutY="400.0" mnemonicParsing="false" onAction="#finishAction" styleClass="generalButton" text="Finish" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>

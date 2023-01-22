@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gashar.fxml.CornerController">
+   <children>
+      <AnchorPane layoutY="6.0" prefHeight="200.0" prefWidth="200.0" styleClass="generalBackgroundPane" stylesheets="@GeneralSheet.css" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="75.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-15.0">
+               <image>
+                  <Image url="@images/scholrlogo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="80.0" layoutY="2.0" prefHeight="42.0" prefWidth="440.0" text="Creatr's Corner: Select courses to continue building, or create a new course. " textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Tahoma" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="backButton" layoutX="534.0" layoutY="13.0" mnemonicParsing="false" onAction="#backAction" styleClass="generalButton" stylesheets="@GeneralSheet.css" text="Back" />
+         </children>
+      </AnchorPane>
+      <TabPane layoutY="50.0" prefHeight="200.0" prefWidth="200.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <tabs>
+          <Tab text="Create a new course">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <RadioButton fx:id="simpleButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="560.0" styleClass="generalButton" stylesheets="@GeneralSheet.css" text="Simple course template" wrapText="true" AnchorPane.bottomAnchor="175.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="325.0" AnchorPane.topAnchor="10.0">
+                           <graphic>
+                              <ImageView fitHeight="126.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/java-logo-1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </RadioButton>
+                        <RadioButton disable="true" layoutX="25.0" layoutY="161.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="560.0" styleClass="generalButton" stylesheets="@GeneralSheet.css" text="Advanced template (Coming soon)" wrapText="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="325.0" AnchorPane.topAnchor="175.0">
+                           <graphic>
+                              <ImageView fitHeight="126.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/java-logo-1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </RadioButton>
+                        <RadioButton fx:id="importButton" layoutX="47.0" layoutY="71.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="560.0" styleClass="generalButton" stylesheets="@GeneralSheet.css" text="Import from computer" wrapText="true" AnchorPane.bottomAnchor="175.0" AnchorPane.leftAnchor="325.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="10.0">
+                           <graphic>
+                              <ImageView fitHeight="126.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/java-logo-1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </RadioButton>
+                        <TextField fx:id="courseNameField" layoutX="376.0" layoutY="229.0" promptText="eg. Java for Beginners" styleClass="generalField" stylesheets="@GeneralSheet.css" />
+                        <Label layoutX="300.0" layoutY="235.0" text="Course Name" />
+                        <Button fx:id="createButton" layoutX="535.0" layoutY="232.0" mnemonicParsing="false" onAction="#createCourseAction" styleClass="generalButton" stylesheets="@GeneralSheet.css" text="Create" />
+                        <Label layoutX="391.0" layoutY="257.0" text="(Can be changed later)" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Continue building courses">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="continueCoursesPane" layoutX="14.0" layoutY="14.0" prefHeight="291.0" prefWidth="257.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="15.0" />
+                        <Button fx:id="selectButton" layoutX="396.0" layoutY="148.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="119.0" styleClass="generalButton" stylesheets="@GeneralSheet.css" text="Select" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="390.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="140.0" />
+                        <Button fx:id="publishButton1" layoutX="391.0" layoutY="188.0" mnemonicParsing="false" onAction="#publishAction" prefHeight="41.0" prefWidth="119.0" styleClass="generalButton" stylesheets="@GeneralSheet.css" text="Publish" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Published courses in this session">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="publishedCoursesPane" layoutX="14.0" layoutY="14.0" prefHeight="297.0" prefWidth="306.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="15.0" />
+                        <Button fx:id="openButton" layoutX="423.0" layoutY="148.0" mnemonicParsing="false" onAction="#openLocationAction" styleClass="generalButton" stylesheets="@GeneralSheet.css" text="Open" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="390.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="140.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

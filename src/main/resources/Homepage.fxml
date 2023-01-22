@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@GeneralSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gashar.fxml.HomepageController">
+    <children>
+        <MenuButton fx:id="chooseButton" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="189.0" mnemonicParsing="false" styleClass="generalButton" text="Choose what you would like to see!" textAlignment="CENTER" AnchorPane.bottomAnchor="188.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="344.0" AnchorPane.topAnchor="189.0">
+            <items>
+                <MenuItem fx:id="learnChoice" mnemonicParsing="false" onAction="#learnChosen" text="Learnr's Location" />
+                <MenuItem fx:id="createChoice" mnemonicParsing="false" onAction="#createChosen" text="Creatr's Corner" />
+                <MenuItem fx:id="socialChoice" mnemonicParsing="false" onAction="#socialChosen" text="Social Spot" />
+                <MenuItem fx:id="beginChoice" mnemonicParsing="false" onAction="#beginChosen" text="Beginnr's Bench" />
+            </items>
+        </MenuButton>
+        <ScrollPane hbarPolicy="NEVER" layoutX="308.0" layoutY="65.0" prefHeight="299.0" prefWidth="278.0" vmax="10.0" vmin="1.0" vvalue="10.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="introLabel" layoutX="12.0" layoutY="14.0" text="What is new with Scholr?">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextArea fx:id="area" blendMode="SRC_ATOP" editable="false" layoutX="14.0" layoutY="39.0" prefHeight="248.0" prefWidth="245.0" text="Scholr is an application that is desinged to help those who aspire to learn new things. Click different options to learn about them! This is the first prototype for this application, so these specific areas are limited to these descriptions. The cloud and database components are functional for these first few views." wrapText="true" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+      <Button fx:id="completeButton" layoutX="124.0" layoutY="341.0" mnemonicParsing="false" onAction="#goToMainPageAction" styleClass="generalButton" text="Done" />
+      <AnchorPane layoutX="133.0" layoutY="-11.0" prefHeight="200.0" prefWidth="200.0" styleClass="generalBackgroundPane" stylesheets="@GeneralSheet.css" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="19.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-15.0">
+               <image>
+                  <Image url="@images/scholrlogo.png" />
+               </image>
+            </ImageView>
+              <Label fx:id="topLabel" layoutX="75.0" layoutY="4.0" prefHeight="42.0" prefWidth="451.0" text="We have noticed that you have not completed the beginner tutorial. Please look through out features and click &quot;Done&quot; when completed." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Tahoma" size="15.0" />
+               </font>
+            </Label>
+              <Button fx:id="logoutButton" layoutX="532.0" layoutY="10.0" mnemonicParsing="false" onAction="#logoutAction" prefHeight="25.0" prefWidth="61.0" styleClass="generalButton" text="Logout" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
