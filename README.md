@@ -7,6 +7,8 @@
 **Scholr** is an all-in-one learning platform meant to engage
 students and teachers alike in an easy-to-use and convenient package.
 
+> Version 1.0: View source code and run .jar file with limited functionality
+
 ***
 
 ## Features
