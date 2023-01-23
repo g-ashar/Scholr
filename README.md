@@ -94,8 +94,7 @@ To run this program with the included .jar file, navigate to the location of the
 file (after downloading it) in some terminal and run the following
 command:
 
-`java --module-path [path to JavaFX lib folder] --add-modules javafx
-.controls,javafx.fxml -jar Scholr.jar`
+`java --module-path "[path to JavaFX lib folder]" --add-modules javafx.controls,javafx.fxml -jar Scholr.jar`
 
 Where `[path to JavaFX lib folder]` is some local directory.
 
