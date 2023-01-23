@@ -102,7 +102,7 @@ public class LoginController extends SwitchFXML implements Initializable {
             try {
                 s = AuthDatabase.authorizeFirebase();
             } catch (IOException e) {
-                e.printStackTrace();
+                System.out.println("Version 1.0 - Functionality limited");
             }
             sw.setS(s);
             init = true;
