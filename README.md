@@ -87,6 +87,25 @@ verification purposes!
 
 ## How to run Scholr
 
+> Prerequisite: local computer will need to have access to JavaFX modules linked
+> [here](https://gluonhq.com/products/javafx/).
+
+To run this program with the included .jar file, navigate to the location of the .jar
+file (after downloading it) in some terminal and run the following
+command:
+
+`java --module-path [path to JavaFX lib folder] --add-modules javafx
+.controls,javafx.fxml -jar Scholr.jar`
+
+Where `[path to JavaFX lib folder]` is some local directory.
+
+Note that while this is the main way to run the project as of
+Version 1.0, there are plans to explore different ways to run
+the software.
+
+> As of Version 1.0, the .jar file can run, but will not allow
+> login/registration functionality. This is currently being addressed.
+
 ## Version History
 
 > Version 1.0
